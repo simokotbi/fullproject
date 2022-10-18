@@ -57,7 +57,7 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     public Item update(Item entity, Integer id) {
-        Optional<Item> optional = findById(id) );
+        Optional<Item> optional = findById(id);
         if (optional.isPresent()) {
             return save(entity);
         }

@@ -19,5 +19,5 @@ public interface GenericService<E, M> {
 
     Page<E> findAll(Pageable pageable);
 
-    E update(E entity, I id);
+    E update(E entity, Integer id);
 }

@@ -57,7 +57,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account update(Account entity, Integer id) {
-        Optional<Account> optional = findById(id) );
+        Optional<Account> optional = findById(id);
         if (optional.isPresent()) {
             return save(entity);
         }

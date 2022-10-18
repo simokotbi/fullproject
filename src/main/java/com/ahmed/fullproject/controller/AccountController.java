@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@Api(tags = "Account API")
+//@Api(tags = "Account API")
 public interface AccountController {
-    @ApiOperation("Add new data")
+    //@ApiOperation("Add new data")
     public AccountDTO save(@RequestBody AccountDTO account);
 
-    @ApiOperation("Find by Id")
+    //@ApiOperation("Find by Id")
     public AccountDTO findById(@PathVariable("id") Integer id);
 
-    @ApiOperation("Delete based on primary key")
+    //@ApiOperation("Delete based on primary key")
     public void delete(@PathVariable("id") Integer id);
 
-    @ApiOperation("Find all data")
+    //@ApiOperation("Find all data")
     public List<AccountDTO> list();
 
-    @ApiOperation("Pagination request")
+    //@ApiOperation("Pagination request")
     public Page<AccountDTO> pageQuery(Pageable pageable);
 
-    @ApiOperation("Update one data")
+    //@ApiOperation("Update one data")
     public AccountDTO update(@RequestBody AccountDTO dto, @PathVariable("id") Integer id);
 }

@@ -1,10 +1,14 @@
 package com.ahmed.fullproject.mapper;
 
 import com.ahmed.fullproject.dto.AbstractDTO;
+import org.mapstruct.ObjectFactory;
+import org.mapstruct.TargetType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
+import java.lang.reflect.InvocationTargetException;
 
 @Component
 public class ReferenceMapper {
@@ -17,7 +21,7 @@ public class ReferenceMapper {
     }
 
     @ObjectFactory
-    public <T extends AbstractEntity<?>> T resolve(AbstractDTO<?> sourceDTO,
+    public <T> T resolve(AbstractDTO<?> sourceDTO,
                                                    @TargetType Class<T> type) {
         T entity = null;
         if (sourceDTO.getId() != null) entity = em.find(type, sourceDTO.getId());

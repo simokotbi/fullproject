@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
-@Api(tags = "Employee API")
+//@Api(tags = "Employee API")
 public interface EmployeeController {
-    @ApiOperation("Add new data")
+    //@ApiOperation("Add new data")
     public EmployeeDTO save(@RequestBody EmployeeDTO employee);
 
-    @ApiOperation("Find by Id")
+    //@ApiOperation("Find by Id")
     public EmployeeDTO findById(@PathVariable("id") Integer id);
 
-    @ApiOperation("Delete based on primary key")
+    //@ApiOperation("Delete based on primary key")
     public void delete(@PathVariable("id") Integer id);
 
-    @ApiOperation("Find all data")
+    //@ApiOperation("Find all data")
     public List<EmployeeDTO> list();
 
-    @ApiOperation("Pagination request")
+    //@ApiOperation("Pagination request")
     public Page<EmployeeDTO> pageQuery(Pageable pageable);
 
-    @ApiOperation("Update one data")
+    //@ApiOperation("Update one data")
     public EmployeeDTO update(@RequestBody EmployeeDTO dto, @PathVariable("id") Integer id);
 }

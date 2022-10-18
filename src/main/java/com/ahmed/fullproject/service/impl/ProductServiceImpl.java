@@ -57,7 +57,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product update(Product entity, Integer id) {
-        Optional<Product> optional = findById(id) );
+        Optional<Product> optional = findById(id);
         if (optional.isPresent()) {
             return save(entity);
         }

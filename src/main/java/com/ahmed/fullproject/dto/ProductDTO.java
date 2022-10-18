@@ -1,5 +1,9 @@
 package com.ahmed.fullproject.dto;
 
+import com.ahmed.fullproject.entity.Item;
+
+import java.util.Set;
+
 public class ProductDTO extends AbstractDTO<Integer> {
     private Integer productId;
     private String productName;

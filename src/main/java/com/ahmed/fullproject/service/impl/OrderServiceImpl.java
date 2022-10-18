@@ -57,7 +57,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public Order update(Order entity, Integer id) {
-        Optional<Order> optional = findById(id) );
+        Optional<Order> optional = findById(id);
         if (optional.isPresent()) {
             return save(entity);
         }

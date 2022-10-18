@@ -57,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer update(Customer entity, Integer id) {
-        Optional<Customer> optional = findById(id) );
+        Optional<Customer> optional = findById(id);
         if (optional.isPresent()) {
             return save(entity);
         }

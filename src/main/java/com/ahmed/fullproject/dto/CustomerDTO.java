@@ -1,5 +1,9 @@
 package com.ahmed.fullproject.dto;
 
+import com.ahmed.fullproject.entity.Order;
+
+import java.util.Set;
+
 public class CustomerDTO extends AbstractDTO<Integer> {
     private Integer customerId;
     private String firstName;
