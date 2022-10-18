@@ -8,6 +8,6 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring", uses = ReferenceMapper.class)
 public interface ItemMapper extends GenericMapper<Item, ItemDTO> {
     @Override
-    @Mapping(target = "id", ignore = false)
+    //@Mapping(target = "id", ignore = false)
     Item asEntity(ItemDTO dto);
 }

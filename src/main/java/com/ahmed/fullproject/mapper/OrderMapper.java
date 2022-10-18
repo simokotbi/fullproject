@@ -8,6 +8,6 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring", uses = ReferenceMapper.class)
 public interface OrderMapper extends GenericMapper<Order, OrderDTO> {
     @Override
-    @Mapping(target = "id", ignore = false)
+        //@Mapping(target = "id", ignore = false)
     Order asEntity(OrderDTO dto);
 }
