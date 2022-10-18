@@ -36,7 +36,7 @@ public class SecurityConfig {
                 .authorizeRequests().antMatchers("/",
                         "/add-employee","/employeenamestable","/new-order").authenticated()
                 .and()
-                .formLogin().loginPage("/emp-login").loginProcessingUrl("/login");
+                .formLogin().permitAll();
 
         return http.build();
     }
