@@ -1,0 +1,45 @@
+
+
+#side-right .side-container {
+    margin-left: auto;
+    background: #fff;
+    padding: 20px 0;
+    z-index: 198;
+    border-left: 10px solid #dce8e8;
+}
+
+#side-left,
+#side-right {
+    position: absolute;
+}
+    
+    .side-container {
+      width: 75px;
+      position: right;
+      top: 0;
+      z-index: 200;
+      min-height: 100%;
+      height: 100%;
+      text-align: center;
+    }
+  
+
+body {
+    font-family: $spring-font-family;
+    background-color: $light-background;
+    margin: 0;
+  }
+
+
+
+#side-right {
+    right: 75px;
+}
+    .side-container {
+      margin-left: auto;
+      background: $light-background;
+      padding: 20px 0;
+      z-index: 198;
+      border-left: 1px solid $light-border;
+    }
+  

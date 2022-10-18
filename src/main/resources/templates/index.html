@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mainpage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="main.css">
+  <!-- <link rel="stylesheet" href="CSS/main.css"> -->
+
+
+</head>
+
+
+<body class="day">
+
+  <nav class="navbar navbar-expand-lg bg1 text-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="Index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- <li class="nav-item">
+                <a class="nav-link text-light active" aria-current="page" href="#"> <i class="fa fa-home"></i>  Home</a>
+              </li>
+               -->
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-home"></i> File
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">New</a></li>
+              <li><a class="dropdown-item txt3" href="#">Open</a></li>
+              <li><a class="dropdown-item txt3" href="#">Save</a></li>
+              <li><a class="dropdown-item txt3" href="#">Save As</a></li>
+              <li><a class="dropdown-item txt3" href="#">Page Setup</a></li>
+              <li><a class="dropdown-item txt3" href="#">Print</a></li>
+              <li><a class="dropdown-item txt3" href="#">Exit</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle  text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-edit"></i>Edit
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3 dropdown-item"  href="#">Action</a></li>
+              <li><a class="dropdown-item txt3" href="#">order</a></li>
+              <li><a class="dropdown-item txt3" href="#">employee</a></li>
+              <li><a class="dropdown-item txt3" href="#">price</a></li>
+              <li><a class="dropdown-item txt3" href="#">inventory</a></li>
+              <li><a class="dropdown-item txt3" href="#">schedule</a></li>
+              <li><a class="dropdown-item txt3" href="#">loyality</a></li>
+            </ul>
+          </li>
+
+
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-users"></i>Employee
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="employeenamestable">Employee List</a></li>
+              <li><a class="dropdown-item txt3" href="emp-login">punch in</a></li>
+              <li><a class="dropdown-item txt3" href="#">punch out</a></li>
+              <li><a class="dropdown-item txt3" href="add-employee">add</a></li>
+              <li><a class="dropdown-item txt3" href="#">edit</a></li>
+              <li><a class="dropdown-item txt3" href="#">delete</a></li>
+              <li><a class="dropdown-item txt3" href="#">assign</a></li>
+              <li><a class="dropdown-item txt3" href="#">un-assign</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-product-hunt"></i>Inventory
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Add product</a></li>
+              <li><a class="dropdown-item txt3" href="#">Remove product</a></li>
+              <li><a class="dropdown-item txt3" href="#">Edit product</a></li>
+              <li><a class="dropdown-item txt3" href="#">delete product</a></li>
+
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-calendar"></i>Scheduling
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Calendar</a></li>
+              <li><a class="dropdown-item txt3" href="#">Employees</a></li>
+              <li><a class="dropdown-item txt3" href="#">Manager</a></li>
+
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-webchat"></i>Web
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Map</a></li>
+              <li><a class="dropdown-item txt3" href="#">Search</a></li>
+
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-loy"></i>Loyality
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Add coupon</a></li>
+              <li><a class="dropdown-item txt3" href="#">Remove coupon</a></li>
+              <li><a class="dropdown-item txt3" href="#">Discount</a></li>
+              <li><a class="dropdown-item txt3" href="#">Manager promo</a></li>
+              <li><a class="dropdown-item txt3" href="#">Loyality GGG</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-too"></i>Tools
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Properties</a></li>
+              <li><a class="dropdown-item txt3" href="#">Preferences</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-report"></i>Reports
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Show report</a></li>
+              <li><a class="dropdown-item txt3" href="#">Print report</a></li>
+              <li><a class="dropdown-item txt3" href="#">Save report</a></li>
+              <li><a class="dropdown-item txt3" href="#">Backup report</a></li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item dropdown text-light">
+            <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa fa-phone"></i>Help
+            </a>
+            <ul class="dropdown-menu bg1 txt3">
+              <li><a class="dropdown-item txt3" href="#">Chat with us</a></li>
+              <li><a class="dropdown-item txt3" href="#">Call us</a></li>
+            </ul>
+          </li>
+
+
+
+        </ul>
+
+      </div>
+    </div>
+    <img src="moon.png" data-mod="day" id="dayNightBtn">
+  </nav>
+
+<!-- <h1 class="text-center">This is the main page</h1> -->
+  <p class="mainTitle"> <b> Pizza POS System -- Main Page</b> </p>
+
+  <div class="row text-center">
+    <div class="col-12 col-md-6 col-lg-4">
+      <a class="one d-inline-block col-row" href="new-order"> New Order</a>
+      <a class="two d-inline-block col-row" href="#"> Find Order </a>
+      <a class="three d-inline-block col-row" href="#"> Driver </a>
+      <a class="four d-inline-block col-row" href="add-employee"> Register </a>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-4">
+      <a class="one d-inline-block col-row" href="#"> Start Run </a>
+      <a class="two d-inline-block col-row" href="#"> End Run </a>
+      <a class="three d-inline-block col-row" href="#"> Select/Deselect </a>
+      <a class="four d-inline-block col-row" href="#"> Map </a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+
+
+  
+  <script src="jquery-3.5.1.js"></script>
+  <script src="jquery.dataTables.min.js"></script>
+  <script src="script.js"></script>
+  <script src="scripthome.js"></script>
+  <!-- <script src="JS/script.js"></script> -->
+
+
+
+  </script>
+
+</body>
+
+</html>
