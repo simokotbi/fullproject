@@ -19,8 +19,8 @@ import java.util.stream.Collectors;
 
 //@RequestMapping("/employee")
 //@RestController
-@Controller
-public class EmployeeControllerImpl implements EmployeeController {
+//@Controller
+public class EmployeeControllerImpl{ /*implements EmployeeController {
     private final EmployeeService employeeService;
     private final EmployeeMapper employeeMapper;
 
@@ -31,20 +31,6 @@ public class EmployeeControllerImpl implements EmployeeController {
 
 
     //@PreAuthorize("hasRole('USER')")
-    @RequestMapping("/")
-    public String index() {
-        return "index";
-    }
-
-    @GetMapping("employee/home")
-    public String home() {
-        return "employee/home";
-    }
-
-    @GetMapping("employee/login")
-    public String employeelogin() {
-        return "employee/emp-login";
-    }
 
 
 
@@ -90,5 +76,5 @@ public class EmployeeControllerImpl implements EmployeeController {
     public EmployeeDTO update(@RequestBody EmployeeDTO employeeDTO, @PathVariable("id") Integer id) {
         Employee employee = employeeMapper.asEntity(employeeDTO);
         return employeeMapper.asDTO(employeeService.update(employee, id));
-    }
+    }*/
 }

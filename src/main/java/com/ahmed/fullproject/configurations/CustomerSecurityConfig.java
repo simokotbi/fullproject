@@ -1,13 +1,14 @@
 package com.ahmed.fullproject.configurations;
 
+import com.ahmed.fullproject.service.CustomerDerailsService;
 import com.ahmed.fullproject.service.EmployeeDerailsService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
+import org.springframework.security.authentication.CachingUserDetailsService;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -15,8 +16,8 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-@Order(1)
-public class SecurityConfig {
+@Order(2)
+public class CustomerSecurityConfig {
 
 
 
@@ -29,45 +30,34 @@ public class SecurityConfig {
                 .build();
         return new InMemoryUserDetailsManager(user);
     }*/
-  private final EmployeeDerailsService employeeDerailsService;
+  private final CustomerDerailsService customerDerailsService;
 
-    public SecurityConfig(EmployeeDerailsService employeeDerailsService) {
-        this.employeeDerailsService = employeeDerailsService;
+    public CustomerSecurityConfig(CustomerDerailsService customerDerailsService) {
+        this.customerDerailsService = customerDerailsService;
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-    /*
-        http.headers().frameOptions().disable();
-        http.csrf().disable()
-                .authorizeRequests().antMatchers("/index",
-                        "/add-employee","/employeenamestable","/new-order").authenticated()
-                .and()
-                .formLogin().loginPage("/employee/emp-login").loginProcessingUrl("/emp-login").defaultSuccessUrl("/employee/home")//successForwardUrl("/employee/home")
-                .and().userDetailsService(employeeDerailsService);
-        return http.build();
-    }
+    public SecurityFilterChain filterChain2(HttpSecurity http) throws Exception {
 
-     */
 
-        http.antMatcher("/employee/**")
-                .authorizeRequests().anyRequest().hasAuthority("USER")
+        http.antMatcher("/customer/**")
+                .authorizeRequests().anyRequest().hasAuthority("CUSTOMER")
                 .and()
                 .formLogin()
-                .loginPage("/employee/login")
+                .loginPage("/customer/login")
                 .usernameParameter("username")
-                //.successForwardUrl("/employee/home")
-                .loginProcessingUrl("/employee/login")
+                //.successForwardUrl("/customer/home")
+                .loginProcessingUrl("/customer/login")
 
-                .defaultSuccessUrl("/employee/home")
+                .defaultSuccessUrl("/customer/customer-home")
                 .permitAll()
-                    .and().userDetailsService(employeeDerailsService);
+                    .and().userDetailsService(customerDerailsService);
         return http.build();
     }
-    @Bean
+  /*  @Bean
     PasswordEncoder passwordEncoder() {
         return NoOpPasswordEncoder.getInstance();
-    }
+    }*/
 
 
 }

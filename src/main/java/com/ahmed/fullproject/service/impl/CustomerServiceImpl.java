@@ -35,12 +35,12 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteById(Integer id) {
-        repository.deleteById(id);
+        repository.deleteById(String.valueOf(id));
     }
 
     @Override
     public Optional<Customer> findById(Integer id) {
-        return repository.findById(id);
+        return repository.findById(String.valueOf(id));
     }
 
     @Override
@@ -50,10 +50,15 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Page<Customer> findAll(Pageable pageable) {
-        Page<Customer> entityPage = repository.findAll(pageable);
+        return null;
+    }
+
+ /*   @Override
+    public Page<Customer> findAll(Pageable pageable) {
+        Page<Customer> entityPage = (Page<Customer>) repository.findAll(pageable);
         List<Customer> entities = entityPage.getContent();
         return new PageImpl<>(entities, pageable, entityPage.getTotalElements());
-    }
+    }*/
 
     @Override
     public Customer update(Customer entity, Integer id) {

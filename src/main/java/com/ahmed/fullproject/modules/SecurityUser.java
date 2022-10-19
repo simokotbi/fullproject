@@ -1,5 +1,6 @@
 package com.ahmed.fullproject.modules;
 
+import com.ahmed.fullproject.entity.Customer;
 import com.ahmed.fullproject.entity.Employee;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -10,19 +11,19 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class MyEmployeeDetails implements UserDetails {
+public class SecurityUser implements UserDetails {
 
-
+//for customers:
     private String email;
     private String password;
     private boolean active;
     private List<GrantedAuthority> authorities;
 
-    public MyEmployeeDetails(Employee employee) {
-        this.email = employee.getEmail();
-        this.password = employee.getPassword();
-        this.active = employee.isActive();
-        this.authorities = Arrays.stream(employee.getRole().split(","))
+    public SecurityUser(Customer customer) {
+        this.email = customer.getEmail();
+        this.password = customer.getPassword();
+        this.active = customer.isActive();
+        this.authorities = Arrays.stream(customer.getRole().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }

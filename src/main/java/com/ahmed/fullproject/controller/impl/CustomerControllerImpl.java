@@ -15,19 +15,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@RequestMapping("/customer")
-@RestController
-public class CustomerControllerImpl implements CustomerController {
+//@RequestMapping("/customer")
+//@RestController
+public class CustomerControllerImpl {/*implements CustomerController {
     private final CustomerService customerService;
     private final CustomerMapper customerMapper;
-    @GetMapping("customer/Login")
-    public String clientlogin() {
-        return "clientLogin";
-    }
-    @GetMapping("customer/home")
-    public String home() {
-        return "customer/home";
-    }
 
 
     public CustomerControllerImpl(CustomerService customerService, CustomerMapper customerMapper) {
@@ -77,5 +69,5 @@ public class CustomerControllerImpl implements CustomerController {
     public CustomerDTO update(@RequestBody CustomerDTO customerDTO, @PathVariable("id") Integer id) {
         Customer customer = customerMapper.asEntity(customerDTO);
         return customerMapper.asDTO(customerService.update(customer, id));
-    }
+    }*/
 }

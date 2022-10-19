@@ -12,9 +12,47 @@ public class Customer {
     private Integer customerId;
     private String firstName;
     private String lastName;
+    private String username;
     private String email;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     private String phoneNumber;
     private String address;
+
+    private String password;
+    private String Role;
+    private boolean active;
+
+    public boolean isActive() {
+        return active;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getRole() {
+        return Role;
+    }
+
+    public void setRole(String role) {
+        Role = role;
+    }
 
     @OneToMany
     @JoinColumn(name = "orderId")
