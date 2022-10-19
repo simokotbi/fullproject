@@ -15,7 +15,7 @@ import com.ahmed.fullproject.service.CustomerService;
 
 @Service
 @Transactional
-public class CustomerServiceImpl implements CustomerService {
+public class CustomerServiceImpl {/*implements CustomerService {
     private final CustomerRepository repository;
 
     public CustomerServiceImpl(CustomerRepository repository) {
@@ -52,12 +52,12 @@ public class CustomerServiceImpl implements CustomerService {
         return null;
     }
 
- /*   @Override
+ *//*   @Override
     public Page<Customer> findAll(Pageable pageable) {
         Page<Customer> entityPage = (Page<Customer>) repository.findAll(pageable);
         List<Customer> entities = entityPage.getContent();
         return new PageImpl<>(entities, pageable, entityPage.getTotalElements());
-    }*/
+    }*//*
 
     @Override
     public Customer update(Customer entity, Integer id) {
@@ -66,5 +66,5 @@ public class CustomerServiceImpl implements CustomerService {
             return save(entity);
         }
         return null;
-    }
+    }*/
 }

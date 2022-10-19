@@ -38,6 +38,7 @@ public class CustomerSecurityConfig {
 
 
         http.antMatcher("/customer/**")
+                .antMatcher("/Register")
                 .authorizeRequests().anyRequest().hasAuthority("CUSTOMER")
                 .and()
                 .formLogin()

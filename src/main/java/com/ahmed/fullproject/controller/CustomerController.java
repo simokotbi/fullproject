@@ -23,7 +23,7 @@ public interface CustomerController {
     public List<CustomerDTO> list();
 
     //@ApiOperation("Pagination request")
-    public Page<CustomerDTO> pageQuery(Pageable pageable);
+   // public Page<CustomerDTO> pageQuery(Pageable pageable);
 
     //@ApiOperation("Update one data")
     public CustomerDTO update(@RequestBody CustomerDTO dto, @PathVariable("id") Integer id);

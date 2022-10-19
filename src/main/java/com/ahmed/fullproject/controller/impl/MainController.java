@@ -1,6 +1,7 @@
 package com.ahmed.fullproject.controller.impl;
 
 import com.ahmed.fullproject.dto.CustomerDTO;
+import com.ahmed.fullproject.service.CustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -22,19 +23,19 @@ public class MainController {
         }
 
         @GetMapping("/employee/home")
-        public String viewAdminHomePage() {
+        public String viewEmployeeHomePage() {
             return "employee/employee-home";
         }
 
         @GetMapping("/customer/login")
-        public String viewUserLoginPage() {
+        public String viewCustomerLoginPage() {
             return "customer/clientLogin";
         }
 
         @GetMapping("/customer/home")
-        public String viewUserHomePage() {
+        public String viewCustomerHomePage() {
             return "customer/customer-home";
         }
 
-      //test
+
     }
