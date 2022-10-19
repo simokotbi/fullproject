@@ -49,7 +49,7 @@ public class CustomerSecurityConfig {
                 //.successForwardUrl("/customer/home")
                 .loginProcessingUrl("/customer/login")
 
-                .defaultSuccessUrl("/customer/customer-home")
+                .defaultSuccessUrl("/customer/home")
                 .permitAll()
                     .and().userDetailsService(customerDerailsService);
         return http.build();
