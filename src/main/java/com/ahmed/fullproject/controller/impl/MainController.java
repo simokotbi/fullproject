@@ -1,8 +1,9 @@
 package com.ahmed.fullproject.controller.impl;
 
+import com.ahmed.fullproject.dto.CustomerDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 
 @Controller
@@ -34,4 +35,6 @@ public class MainController {
         public String viewUserHomePage() {
             return "customer/customer-home";
         }
+
+
     }
