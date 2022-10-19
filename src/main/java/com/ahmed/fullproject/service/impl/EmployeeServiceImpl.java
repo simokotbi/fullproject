@@ -1,18 +1,17 @@
 package com.ahmed.fullproject.service.impl;
 
-import com.ahmed.fullproject.dao.EmployeeRepository;
-import com.ahmed.fullproject.dto.EmployeeDTO;
-import com.ahmed.fullproject.entity.Employee;
-import com.ahmed.fullproject.mapper.EmployeeMapper;
-import com.ahmed.fullproject.service.EmployeeService;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
+import com.ahmed.fullproject.dao.EmployeeRepository;
+import com.ahmed.fullproject.entity.Employee;
+import com.ahmed.fullproject.service.EmployeeService;
 
 @Service
 @Transactional

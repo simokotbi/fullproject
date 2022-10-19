@@ -1,21 +1,20 @@
 package com.ahmed.fullproject.controller.impl;
 
-import com.ahmed.fullproject.controller.EmployeeController;
-import com.ahmed.fullproject.dto.EmployeeDTO;
-import com.ahmed.fullproject.entity.Employee;
-import com.ahmed.fullproject.mapper.EmployeeMapper;
-import com.ahmed.fullproject.service.EmployeeService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+// import com.ahmed.fullproject.controller.EmployeeController;
+// import com.ahmed.fullproject.dto.EmployeeDTO;
+// import com.ahmed.fullproject.entity.Employee;
+// import com.ahmed.fullproject.mapper.EmployeeMapper;
+// import com.ahmed.fullproject.service.EmployeeService;
+// import org.springframework.data.domain.Page;
+// import org.springframework.data.domain.PageImpl;
+// import org.springframework.data.domain.Pageable;
+// import org.springframework.http.HttpStatus;
+// import org.springframework.security.access.prepost.PreAuthorize;
+// import org.springframework.stereotype.Controller;
+// import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+// import java.util.List;
+// import java.util.stream.Collectors;
 
 //@RequestMapping("/employee")
 //@RestController

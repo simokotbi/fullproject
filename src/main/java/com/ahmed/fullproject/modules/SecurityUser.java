@@ -1,15 +1,15 @@
 package com.ahmed.fullproject.modules;
 
-import com.ahmed.fullproject.entity.Customer;
-import com.ahmed.fullproject.entity.Employee;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import com.ahmed.fullproject.entity.Customer;
 
 public class SecurityUser implements UserDetails {
 

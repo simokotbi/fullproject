@@ -1,12 +1,11 @@
 package com.ahmed.fullproject.dao;
 
-import com.ahmed.fullproject.entity.Employee;
-import org.springframework.data.domain.Pageable;
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.Optional;
+import com.ahmed.fullproject.entity.Employee;
 
 @Repository
 public interface EmployeeRepository extends CrudRepository<Employee,String> {

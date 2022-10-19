@@ -1,18 +1,17 @@
 package com.ahmed.fullproject.service.impl;
 
-import com.ahmed.fullproject.dao.CustomerRepository;
-import com.ahmed.fullproject.dto.CustomerDTO;
-import com.ahmed.fullproject.entity.Customer;
-import com.ahmed.fullproject.mapper.CustomerMapper;
-import com.ahmed.fullproject.service.CustomerService;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
-import java.util.List;
-import java.util.Optional;
+import com.ahmed.fullproject.dao.CustomerRepository;
+import com.ahmed.fullproject.entity.Customer;
+import com.ahmed.fullproject.service.CustomerService;
 
 @Service
 @Transactional

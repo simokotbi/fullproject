@@ -1,10 +1,16 @@
 package com.ahmed.fullproject.entity;
 
-import javax.persistence.*;
+import static javax.persistence.GenerationType.IDENTITY;
+
 import java.util.Date;
 import java.util.Set;
 
-import static javax.persistence.GenerationType.IDENTITY;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Table(name = "`order`")
 @Entity

@@ -1,19 +1,18 @@
 package com.ahmed.fullproject.controller.impl;
 
-import com.ahmed.fullproject.controller.CustomerController;
-import com.ahmed.fullproject.dto.CustomerDTO;
-import com.ahmed.fullproject.entity.Customer;
-import com.ahmed.fullproject.mapper.CustomerMapper;
-import com.ahmed.fullproject.service.CustomerService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+// import com.ahmed.fullproject.controller.CustomerController;
+// import com.ahmed.fullproject.dto.CustomerDTO;
+// import com.ahmed.fullproject.entity.Customer;
+// import com.ahmed.fullproject.mapper.CustomerMapper;
+// import com.ahmed.fullproject.service.CustomerService;
+// import org.springframework.data.domain.Page;
+// import org.springframework.data.domain.PageImpl;
+// import org.springframework.data.domain.Pageable;
+// import org.springframework.http.HttpStatus;
+// import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+// import java.util.List;
+// import java.util.stream.Collectors;
 
 //@RequestMapping("/customer")
 //@RestController

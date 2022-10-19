@@ -1,13 +1,13 @@
 package com.ahmed.fullproject.service;
 
 
-import com.ahmed.fullproject.dao.CustomerRepository;
-import com.ahmed.fullproject.modules.SecurityEmployee;
-import com.ahmed.fullproject.modules.SecurityUser;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.ahmed.fullproject.dao.CustomerRepository;
+import com.ahmed.fullproject.modules.SecurityUser;
 
 @Service
     public class CustomerDerailsService implements UserDetailsService {

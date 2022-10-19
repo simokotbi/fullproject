@@ -1,10 +1,16 @@
 package com.ahmed.fullproject.entity;
 
-import org.springframework.lang.NonNull;
-
-import javax.persistence.*;
-
 import static javax.persistence.GenerationType.IDENTITY;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import org.springframework.lang.NonNull;
 
 @Table(name = "account")
 @Entity
