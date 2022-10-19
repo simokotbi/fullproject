@@ -1,0 +1,9 @@
+ [{"EmployeeNumber": "1","FirstName":"Alex","LastName": "Johnson","PhoneNumber":"6105005000","Email":"a@gg.com","Password":"Alex1234"},
+  {"EmployeeNumber": "2","FirstName":"Bob","LastName": "Smith","PhoneNumber":"4840001111","Email":"b@gg.com","Password":"Bob1234"},
+  {"EmployeeNumber": "3","FirstName":"Chris","LastName": "Cr","PhoneNumber":"6105005000","Email":"c@gg.com","Password":"Ale1234"},
+  {"EmployeeNumber": "4","FirstName":"Dave","LastName": "Prinston","PhoneNumber":"2152223333","Email":"d@gg.com","Password":"Dave1234"},
+  {"EmployeeNumber": "5","FirstName":"Tom","LastName": "James","PhoneNumber":"2672672672","Email":"t@gg.com","Password":"Tom1234"},
+  {"EmployeeNumber": "6","FirstName":"Jone","LastName": "Kerr","PhoneNumber":"5555555555","Email":"j@gg.com","Password":"Jone1234"}
+
+
+]

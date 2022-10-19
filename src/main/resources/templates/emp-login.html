@@ -211,20 +211,20 @@
         <div class="row">
             <div class="col-6 offset-3">
                 <div class="myBg">
-                    <form >
+                    <form th:action="@{/home}" method="post">
                         <p class="text-center">Employee Login</p>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" required id="user" placeholder="User Name" >
+                            <input type="text" class="form-control" required id="user" name="username" autofocus="autofocus" placeholder="User Name" >
                             <label for="user">User Name</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" class="form-control" required id="pass" placeholder="Password" >
+                            <input type="password" class="form-control" required id="pass" name="password" placeholder="Password" >
                             <label for="pass">Password</label>
                         </div>
                         <div class="text-center mt-5">
 
-                            <input id = "login-button" value="Login" class="btn btn-success" >
-                            <a href="index.html" class="btn btn-danger">Cancel</a>
+                            <input id = "login-button" value="Login" class="btn btn-success" name="login"  type="submit" >
+                           <!-- <a href="index.html" class="btn btn-danger">Cancel</a>-->
                         </div>
                     </form>
                 </div>

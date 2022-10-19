@@ -19,11 +19,13 @@ CREATE TABLE `customer` (
 CREATE TABLE `employee` (
   `employee_id` int NOT NULL AUTO_INCREMENT,
   `email` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL,
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `phone_no` varchar(255) DEFAULT NULL,
   `ssn` varchar(255) DEFAULT NULL,
   `ACTIVE` BOOLEAN,
+   `Role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`employee_id`)
 );
 
@@ -66,7 +68,7 @@ CREATE TABLE `product_items` (
   PRIMARY KEY (`product_product_id`,`items_item_id`)
 ); */
 
-INSERT INTO PUBLIC.EMPLOYEE (EMPLOYEE_ID, EMAIL, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO, SSN,ACTIVE) VALUES(1, 'randomness', 'randomness', 'randomness', 'randomness', '$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'randomness',true);
+INSERT INTO PUBLIC.EMPLOYEE (EMPLOYEE_ID,USERNAME, EMAIL, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO, SSN,ACTIVE,ROLE) VALUES(1, 'randomness', 'randomness', 'randomness', 'randomness', 'randomness', '$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'randomness',true,'USER');
 INSERT INTO PUBLIC.ACCOUNT (PASSWORD, USER_NAME, EMPLOYEE_ID) VALUES('$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'randomness', 1);
 -- INSERT INTO PUBLIC.CUSTOMER (ADDRESS, EMAIL, FIRST_NAME, LAST_NAME, PHONE_NUMBER) VALUES('randomness', 'randomness', 'randomness', 'randomness', 'randomness');
 -- INSERT INTO PUBLIC.ITEM (NAME, "TYPE") VALUES('randomness', 'randomness');

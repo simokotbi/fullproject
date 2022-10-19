@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://thymeleaf.org">
+
+<head>
+    
+</head>
+
+<body class="day">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Pizza POS System</h1>
+            <p class="lead"></p>
+            <hr class="my-4">
+            <p>Please login To start use our website</p>
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            
+            <div class="col-12 col-md-3">
+                <div class="border">
+                    <div class="alert alert-primary text-center" role="alert">
+                        <a   th:href="@{/employee/}">
+                            <h2><i class="fa fa-user fa-4x" aria-hidden="true"></i></h2>
+                            <h3>Customer Login</h3>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="border">
+                    <div class="alert alert-warning text-center" role="alert">
+                        <a th:href="@{/customer/clientLogin}">
+                            <h2><i class="fa fa-lock fa-4x" aria-hidden="true"></i></h2>
+                            <h3>Employee Login</h3>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    <script src="JS/jquery-3.5.1.js"></script>
+    <script src="js/Files.js"></script>
+    
+
+   
+</body>
+
+</html>

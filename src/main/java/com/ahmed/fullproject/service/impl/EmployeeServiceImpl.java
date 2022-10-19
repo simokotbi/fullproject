@@ -35,12 +35,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public void deleteById(Integer id) {
-        repository.deleteById(id);
+        repository.deleteById(String.valueOf(id));
     }
 
     @Override
     public Optional<Employee> findById(Integer id) {
-        return repository.findById(id);
+        return repository.findById(String.valueOf(Long.valueOf(id)));
     }
 
     @Override
@@ -50,10 +50,15 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Page<Employee> findAll(Pageable pageable) {
-        Page<Employee> entityPage = repository.findAll(pageable);
+        return null;
+    }
+
+  /*  @Override
+    public Page<Employee> findAll(Pageable pageable) {
+        Page<Employee> entityPage = (Page<Employee>) repository.findAll(pageable);
         List<Employee> entities = entityPage.getContent();
         return new PageImpl<>(entities, pageable, entityPage.getTotalElements());
-    }
+    }*/
 
     @Override
     public Employee update(Employee entity, Integer id) {

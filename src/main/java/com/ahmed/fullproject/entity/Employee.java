@@ -15,7 +15,26 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer employeeId;
     private String firstName;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    private String username;
+    public String getRole() {
+        return Role;
+    }
+
+    public void setRole(String role) {
+        Role = role;
+    }
+
     private String lastName;
+    private String Role;
 
     public boolean isActive() {
         return active;
@@ -26,17 +45,11 @@ public class Employee {
     }
 
     private boolean active;
-    public String getRoles() {
-        return roles;
-    }
 
-    public void setRoles(String roles) {
-        this.roles = roles;
-    }
 
     private String phoneNo;
-    private String roles;
-    public Employee(Integer employeeId, String firstName, String lastName, String phoneNo, String email, String password, String ssn, String roles) {
+
+    public Employee(Integer employeeId, String firstName, String lastName, String phoneNo, String email, String password, String ssn, String Role) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -44,7 +57,7 @@ public class Employee {
         this.email = email;
         this.password = password;
         this.ssn = ssn;
-
+            this.Role=Role;
     }
 
     public Employee() {

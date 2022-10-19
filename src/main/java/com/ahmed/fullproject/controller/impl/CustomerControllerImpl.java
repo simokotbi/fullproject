@@ -20,7 +20,10 @@ import java.util.stream.Collectors;
 public class CustomerControllerImpl implements CustomerController {
     private final CustomerService customerService;
     private final CustomerMapper customerMapper;
-
+    @GetMapping("/clientLogin")
+    public String clientlogin() {
+        return "clientLogin";
+    }
     public CustomerControllerImpl(CustomerService customerService, CustomerMapper customerMapper) {
         this.customerService = customerService;
         this.customerMapper = customerMapper;

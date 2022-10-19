@@ -9,6 +9,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +18,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RequestMapping("/employee")
-@RestController
+//@RestController
+@Controller
 public class EmployeeControllerImpl implements EmployeeController {
     private final EmployeeService employeeService;
     private final EmployeeMapper employeeMapper;
@@ -26,6 +29,26 @@ public class EmployeeControllerImpl implements EmployeeController {
         this.employeeMapper = employeeMapper;
     }
 
+
+    @GetMapping("/home")
+    public String home() {
+        return "home";
+    }
+
+    @GetMapping("/emp-login")
+    public String employeelogin() {
+        return "emp-login";
+    }
+
+    @GetMapping("/admin")
+    public String admin() {
+        return ("<h1>Welcome Admin</h1>");
+    }
+    @PreAuthorize("hasRole('USER')")
+    @RequestMapping("/")
+    public String index() {
+        return "index";
+    }
     @Override
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

@@ -1,0 +1,22 @@
+body {
+    background-color: #F9F9F9;
+    padding-top: 56px;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    color: orange;
+    text-decoration: none;
+}
+
+.card img{
+    height:190px ;
+    width: 280px;
+}
+.indexImg{
+    height: 50px;
+}

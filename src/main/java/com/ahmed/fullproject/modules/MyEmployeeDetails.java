@@ -13,16 +13,16 @@ import java.util.stream.Collectors;
 public class MyEmployeeDetails implements UserDetails {
 
 
-    private String userName;
+    private String email;
     private String password;
     private boolean active;
     private List<GrantedAuthority> authorities;
 
     public MyEmployeeDetails(Employee employee) {
-        this.userName = employee.getEmail();
+        this.email = employee.getEmail();
         this.password = employee.getPassword();
         this.active = employee.isActive();
-        this.authorities = Arrays.stream(employee.getRoles().split(","))
+        this.authorities = Arrays.stream(employee.getRole().split(","))
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toList());
     }
@@ -39,7 +39,7 @@ public class MyEmployeeDetails implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return email;
     }
 
     @Override
