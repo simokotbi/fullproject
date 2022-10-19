@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-@RequestMapping("/employee")
+//@RequestMapping("/employee")
 //@RestController
 @Controller
 public class EmployeeControllerImpl implements EmployeeController {
@@ -30,25 +30,24 @@ public class EmployeeControllerImpl implements EmployeeController {
     }
 
 
-    @GetMapping("/home")
-    public String home() {
-        return "home";
-    }
-
-    @GetMapping("/emp-login")
-    public String employeelogin() {
-        return "emp-login";
-    }
-
-    @GetMapping("/admin")
-    public String admin() {
-        return ("<h1>Welcome Admin</h1>");
-    }
-    @PreAuthorize("hasRole('USER')")
+    //@PreAuthorize("hasRole('USER')")
     @RequestMapping("/")
     public String index() {
         return "index";
     }
+
+    @GetMapping("employee/home")
+    public String home() {
+        return "employee/home";
+    }
+
+    @GetMapping("employee/login")
+    public String employeelogin() {
+        return "employee/emp-login";
+    }
+
+
+
     @Override
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
