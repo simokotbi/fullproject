@@ -100,67 +100,28 @@
               <div class="card-body">
 
                 <div class="row">
+                  <h1>products</h1>
                   <!--==============================-->
+                  <div th:each="products: ${products}">
+                    <h1>product</h1>
                   <div class="col-6 col-md-3">
                     <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="Images/s1.jpg" alt="Card image cap">
+
+                      <img class="card-img-top" src="../static/Images/D1.jpg" th:src="@{Images/D1.jpg}" alt="Card image cap">
                       <div class="card-body">
-                        <h5 class="card-title">Sandwich name <span
-                                class="text-danger pl-2 ">25$</span></h5>
-                        <p class="card-text">Some quick example text.</p>
+                        <h5 class="card-title"><p th:text="${products.name}"></p> <span
+                                class="text-danger pl-2 "><p th:text="${products.type}"></p></span></h5>
+                        <p class="card-text"><p th:text="${products.name}"></p></p>
                         <a href="#" class="btn btn-primary itemBtn btn-block"
                            data-toggle="modal" data-target="#exampleModal">
                           Order
+
                         </a>
                       </div>
                     </div>
                   </div>
-                  <!--==================================-->
-                  <!--==============================-->
-                  <div class="col-6 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="Images/s2.png" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Sandwich name <span
-                                class="text-danger pl-2 ">30$</span></h5>
-                        <p class="card-text">Some quick example text.</p>
-                        <a href="#" class="btn btn-primary itemBtn btn-block"
-                           data-toggle="modal" data-target="#exampleModal">
-                          Order
-                        </a>
-                      </div>
-                    </div>
                   </div>
-                  <!--==============================-->
-                  <div class="col-6 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="Images/s3.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Sandwich name <span
-                                class="text-danger pl-2 ">15$</span></h5>
-                        <p class="card-text">Some quick example text.</p>
-                        <a href="#" class="btn btn-primary itemBtn btn-block"
-                           data-toggle="modal" data-target="#exampleModal">
-                          Order
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <!--==============================-->
-                  <div class="col-6 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                      <img class="card-img-top" src="Images/s4.jfif" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Sandwich name <span
-                                class="text-danger pl-2 ">50$</span></h5>
-                        <p class="card-text">Some quick example text.</p>
-                        <a href="#" class="btn btn-primary itemBtn btn-block"
-                           data-toggle="modal" data-target="#exampleModal">
-                          Order
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+
                   <!--==============================-->
                 </div>
 

@@ -23,7 +23,7 @@ public class Order {
     private Date entryDate;
     private String notes;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    private Set<Product> products ;
+    private Set<Item> items ;
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Set<Employee> employees;
 

@@ -16,8 +16,13 @@ package com.ahmed.fullproject.controller.impl;
 
 import com.ahmed.fullproject.controller.CustomerController;
 import com.ahmed.fullproject.dao.CustomerRepository;
+import com.ahmed.fullproject.dao.ItemRepository;
+import com.ahmed.fullproject.dao.OrderRepository;
+import com.ahmed.fullproject.dao.ProductRepository;
 import com.ahmed.fullproject.dto.CustomerDTO;
 import com.ahmed.fullproject.entity.Customer;
+import com.ahmed.fullproject.entity.Item;
+import com.ahmed.fullproject.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +30,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 //@RequestMapping("/customer")
@@ -35,8 +41,13 @@ public class CustomerControllerImpl  {
     @Autowired
     CustomerRepository customerRepository;
 
+@Autowired
+ItemRepository itemRepository;
+    @Autowired
+    OrderRepository orderRepository;
 
-
+    @Autowired
+    ProductRepository productRepository;
 
     @RequestMapping("/registration")
     public String showRegistrationForm(Model model) {
@@ -62,6 +73,22 @@ public class CustomerControllerImpl  {
 
     }
 
+    @GetMapping("/employee/home")
+    public String showiproducts(Model model) {
+      List<Item>item=itemRepository.findAll();
+        model.addAttribute("products",item);
+        return "employee/employee-order";
+    }
+
+    @PostMapping("/addToCart")
+    public String addToCart(HttpServletRequest request, Model model, @RequestParam("itemId") Long id,
+                            @RequestParam("name") String name) {
+
+
+        //orderRepository.save();
+
+        return "redirect:/";
+    }
     /*   @GetMapping("/customer/order")
        public String showOrderForm(Model model) {
            model.addAttribute("order", new Order());

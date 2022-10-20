@@ -27,7 +27,6 @@ CREATE TABLE `employee` (
   `first_name` varchar(255) DEFAULT NULL,
   `last_name` varchar(255) DEFAULT NULL,
   `phone_no` varchar(255) DEFAULT NULL,
-  `ssn` varchar(255) DEFAULT NULL,
   `ACTIVE` BOOLEAN,
    `Role` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`employee_id`)
@@ -72,15 +71,22 @@ CREATE TABLE `product_items` (
   PRIMARY KEY (`product_product_id`,`items_item_id`)
 ); */
 
-INSERT INTO PUBLIC.EMPLOYEE (EMPLOYEE_ID,USERNAME, EMAIL, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO, SSN,ACTIVE,ROLE) VALUES(1, 'employee1', 'employee1', 'employee1', 'employee1', 'employee1', '$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'employee1',true,'EMPLOYEE');
-INSERT INTO PUBLIC.EMPLOYEE (EMPLOYEE_ID,USERNAME, EMAIL, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO, SSN,ACTIVE,ROLE) VALUES(2, 'employee2', 'employee2', 'employee2', 'employee2', 'employee2', '$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'employee2',true,'ADMIN');
+INSERT INTO PUBLIC.EMPLOYEE (EMPLOYEE_ID, EMAIL,USERNAME, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO,ACTIVE,ROLE) VALUES(1, 'Alex', 'a@pizza.com', 'Alex', 'Alex', 'a1234','111-111-1111',true,'EMPLOYEE');
+
+insert into PUBLIC.EMPLOYEE  (EMPLOYEE_ID, EMAIL,USERNAME, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO,ACTIVE,ROLE) VALUES (2, 'Bob','b@pizza.com', 'bob', 'bob', 'b1234',  '222-222-2222',true,'EMPLOYEE');
+insert into PUBLIC.EMPLOYEE  (EMPLOYEE_ID, EMAIL,USERNAME, FIRST_NAME, LAST_NAME, PASSWORD, PHONE_NO,ACTIVE,ROLE) values (3,'Chris', 'c@pizza.com','Chris', 'Chris',  'c1234','333-333-333',true,'EMPLOYEE');
+
+
 
 INSERT INTO PUBLIC.ACCOUNT (PASSWORD, USER_NAME, EMPLOYEE_ID) VALUES('$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'randomness', 1);
 INSERT INTO PUBLIC.ACCOUNT (PASSWORD, USER_NAME, EMPLOYEE_ID) VALUES('$2a$10$i6Rym4qyotX12Bwd.Nna5OLK67nsVZdxUeGtIuvM21/GLxxDWts6C', 'randomness', 2);
  INSERT INTO PUBLIC.CUSTOMER (ADDRESS, EMAIL, FIRST_NAME, LAST_NAME, USERNAME,PHONE_NUMBER,PASSWORD,ROLE,ACTIVE) VALUES('customer1', 'customer1', 'customer1', 'customer1', 'customer1','customer1','customer1','USER',true);
--- INSERT INTO PUBLIC.ITEM (NAME, "TYPE") VALUES('randomness', 'randomness');
--- INSERT INTO PUBLIC."order" (ENTRY_DATE, NOTES, ORDER_PRICE, ORDER_STATUS) VALUES('randomness', 'randomness', 0, 'randomness');
+INSERT INTO PUBLIC.ITEM (NAME, "TYPE") VALUES('randomness', 'randomness');
+INSERT INTO PUBLIC."order" (ENTRY_DATE, NOTES, ORDER_PRICE, ORDER_STATUS) VALUES(CAST(NOW() AS DATE), 'randomness', 0, 'randomness');
 -- INSERT INTO PUBLIC."order_employees" ("order_order_id", EMPLOYEES_EMPLOYEE_ID) VALUES(0, 0);
--- INSERT INTO PUBLIC."order_products" ("order_order_id", PRODUCTS_PRODUCT_ID) VALUES(0, 0);
--- INSERT INTO PUBLIC.PRODUCT (PRICE, PRODUCT_NAME) VALUES(0, 'randomness');
--- INSERT INTO PUBLIC.PRODUCT_ITEMS (PRODUCT_PRODUCT_ID, ITEMS_ITEM_ID) VALUES(0, 0);
+ --INSERT INTO PUBLIC."order_products" ("order_order_id", PRODUCTS_PRODUCT_ID) VALUES(0, 0);
+--INSERT INTO PUBLIC.PRODUCT (PRICE, PRODUCT_NAME) VALUES(0, 'randomness');
+ --INSERT INTO PUBLIC.PRODUCT_ITEMS (PRODUCT_PRODUCT_ID, ITEMS_ITEM_ID) VALUES(0, 0);
+
+
+

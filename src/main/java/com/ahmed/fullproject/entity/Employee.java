@@ -48,14 +48,14 @@ public class Employee {
 
     private String phoneNo;
 
-    public Employee(Integer employeeId, String firstName, String lastName, String phoneNo, String email, String password, String ssn, String Role) {
+    public Employee(Integer employeeId, String firstName, String lastName, String phoneNo, String email, String password, String Role) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNo = phoneNo;
         this.email = email;
         this.password = password;
-        this.ssn = ssn;
+
             this.Role=Role;
     }
 
@@ -70,7 +70,7 @@ public class Employee {
     private String email;
 
     private String password;
-    private String ssn;
+
     public Integer getEmployeeId() {
         return employeeId;
     }
@@ -107,13 +107,6 @@ public class Employee {
         this.phoneNo = phoneNo;
     }
 
-    public String getSsn() {
-        return ssn;
-    }
-
-    public void setSsn(String ssn) {
-        this.ssn = ssn;
-    }
 
     public String getEmail() {
         return email;
