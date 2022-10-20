@@ -42,7 +42,8 @@ public class MainController {
 
         @GetMapping("/customer/home")
         public String viewCustomerHomePage() {
-            return "customer/customer-home";
+            return "customer/customerneworder";
+            //customer-home
         }
 
 

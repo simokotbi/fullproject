@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link th:href = "@{/Bootstrap/css/bootstrap.min.css}" rel="stylesheet">
 </head>
 
-<body>
-<div class="container-fluid mt-3">
+<body> <div class="container-fluid mt-3">
     <div class="row">
         <div class="col-md-3 col-12">
             <div class="border border-success p-3">
@@ -46,47 +46,38 @@
                     </table>
 
                 </div>
-                <form th:action="@{/customer/order}" method="post">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp" placeholder="Enter email">
 
-                    <div th:if="${message}" th:classappend="${message}?'show':'hide'" class="form-floating mb-3 alert alert-success alert-dismissible fade show">
-
-                        <span  th:text="${message}"  ></span>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
                     </div>
-
-                    <div th:if="${error}" th:classappend="${error}?'show':'hide'" class="form-floating mb-3 alert alert-danger alert-dismissible fade show">
-
-                        <span  th:text="${error}"  ></span>
-                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-                    </div>
-                    <p class="text-center">Create Order</p>
-                    <div class="form-floating mb-3">
-                        <input name="firstName" type="text" class="form-control" required id="first-name" placeholder="First Name" >
-                        <label for="first-name">First Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input name="lastName" type="text" class="form-control" required id="last-name" placeholder="Last Name" >
-                        <label for="last-name">Last Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input name="email" type="text" class="form-control" required id="email" placeholder="Email" >
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <input name="phoneNumber" type="text" class="form-control" required id="phone-number" placeholder="Phone Number" >
-                        <label for="phone-number">Phone Number</label>
+                    <div class="form-group">
+                        <label for="adress">adress</label>
+                        <input type="text" class="form-control" id="adress" placeholder="adress">
                     </div>
 
-                    <div class="form-floating">
-                        <input name="address" type="text" class="form-control" required id="address" placeholder="Address" >
-                        <label for="address">Address</label>
+                    <div class="form-group">
+                        <label for="Phone">Phone</label>
+                        <input type="text" class="form-control" id="Phone" placeholder="Phone">
                     </div>
 
-                    <div class="text-center mt-5">
-
-                        <input type="submit" id = "register-button" value="Register" class="btn btn-success" >
-                        <a href="/" class="btn btn-danger">Cancel</a>
+                    <div class="form-group">
+                        <label for="pay">Payment method</label>
+                        <select id="pay" class="form-control">
+                            <option>cash payment</option>
+                            <option>By bank card</option>
+                            <option>upon receipt</option>
+                        </select>
                     </div>
+
+
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg btn-block">Order Now</button>
                 </form>
             </div>
         </div>
@@ -109,67 +100,28 @@
                             <div class="card-body">
 
                                 <div class="row">
+                                    <h1>products</h1>
                                     <!--==============================-->
-                                    <div class="col-6 col-md-3">
-                                        <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="Images/s1.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Sandwich name <span
-                                                        class="text-danger pl-2 ">25$</span></h5>
-                                                <p class="card-text">Some quick example text.</p>
-                                                <a href="#" class="btn btn-primary itemBtn btn-block"
-                                                   data-toggle="modal" data-target="#exampleModal">
-                                                    Order
-                                                </a>
+                                    <div th:each="products: ${products}">
+                                        <h1>product</h1>
+                                        <div class="col-6 col-md-3">
+                                            <div class="card" style="width: 18rem;">
+
+                                                <img class="card-img-top" src="../static/Images/D1.jpg" th:src="@{Images/D1.jpg}" alt="Card image cap">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><p th:text="${products.name}"></p> <span
+                                                            class="text-danger pl-2 "><p th:text="${products.type}"></p></span></h5>
+                                                    <p class="card-text"><p th:text="${products.name}"></p></p>
+                                                    <a href="#" class="btn btn-primary itemBtn btn-block"
+                                                       data-toggle="modal" data-target="#exampleModal">
+                                                        Order
+
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <!--==================================-->
-                                    <!--==============================-->
-                                    <div class="col-6 col-md-3">
-                                        <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="Images/s2.png" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Sandwich name <span
-                                                        class="text-danger pl-2 ">30$</span></h5>
-                                                <p class="card-text">Some quick example text.</p>
-                                                <a href="#" class="btn btn-primary itemBtn btn-block"
-                                                   data-toggle="modal" data-target="#exampleModal">
-                                                    Order
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--==============================-->
-                                    <div class="col-6 col-md-3">
-                                        <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="Images/s3.jpg" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Sandwich name <span
-                                                        class="text-danger pl-2 ">15$</span></h5>
-                                                <p class="card-text">Some quick example text.</p>
-                                                <a href="#" class="btn btn-primary itemBtn btn-block"
-                                                   data-toggle="modal" data-target="#exampleModal">
-                                                    Order
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--==============================-->
-                                    <div class="col-6 col-md-3">
-                                        <div class="card" style="width: 18rem;">
-                                            <img class="card-img-top" src="Images/s4.jfif" alt="Card image cap">
-                                            <div class="card-body">
-                                                <h5 class="card-title">Sandwich name <span
-                                                        class="text-danger pl-2 ">50$</span></h5>
-                                                <p class="card-text">Some quick example text.</p>
-                                                <a href="#" class="btn btn-primary itemBtn btn-block"
-                                                   data-toggle="modal" data-target="#exampleModal">
-                                                    Order
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <!--==============================-->
                                 </div>
 
@@ -398,10 +350,10 @@
 
 
 
-<script src="fullproject/src/main/resources/static/js/jquery-3.5.1.js"></script>
-<script src="fullproject/src/main/resources/static/Bootstrap/JS/bootstrap.min.js"></script>
-<script src="fullproject/src/main/resources/static/js/CreateNav.js"></script>
-<script src="fullproject/src/main/resources/static/js/Files.js"></script>
+<script src="js/jquery-3.5.1.js"></script>
+<script src="Bootstrap/JS/bootstrap.min.js"></script>
+<script src="js/CreateNav.js"></script>
+<script src="js/Files.js"></script>
 </body>
 
 </html>
