@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link th:href = "@{/Bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+
+<body> <div class="container-fluid mt-3">
+  <div class="row">
+    <div class="col-md-3 col-12">
+      <div class="border border-success p-3">
+        <div class="orderTable">
+          <table class="table">
+            <thead class="thead-dark">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Quantity</th>
+              <th scope="col">Price</th>
+              <th scope="col">total</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>2</td>
+              <td>15</td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>1</td>
+              <td>25</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>1</td>
+              <td>100</td>
+              <td>100</td>
+            </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1"
+                   aria-describedby="emailHelp" placeholder="Enter email">
+
+          </div>
+          <div class="form-group">
+            <label for="adress">adress</label>
+            <input type="text" class="form-control" id="adress" placeholder="adress">
+          </div>
+
+          <div class="form-group">
+            <label for="Phone">Phone</label>
+            <input type="text" class="form-control" id="Phone" placeholder="Phone">
+          </div>
+
+          <div class="form-group">
+            <label for="pay">Payment method</label>
+            <select id="pay" class="form-control">
+              <option>cash payment</option>
+              <option>By bank card</option>
+              <option>upon receipt</option>
+            </select>
+          </div>
+
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-success btn-lg btn-block">Order Now</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-9 col-12">
+
+      <div class="border border-info b-2">
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+              <h5 class="mb-0">
+                <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                        aria-expanded="true" aria-controls="collapseOne">
+                  Sandwich #1
+                </button>
+              </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                 data-parent="#accordion">
+              <div class="card-body">
+
+                <div class="row">
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/s1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Sandwich name <span
+                                class="text-danger pl-2 ">25$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==================================-->
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/s2.png" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Sandwich name <span
+                                class="text-danger pl-2 ">30$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/s3.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Sandwich name <span
+                                class="text-danger pl-2 ">15$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/s4.jfif" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Sandwich name <span
+                                class="text-danger pl-2 ">50$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="card">
+            <div class="card-header" id="headingTwo">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse"
+                        data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Pizza #2
+                </button>
+              </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                 data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/p1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza name <span
+                                class="text-danger pl-2 ">90$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==================================-->
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/p2.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza name <span
+                                class="text-danger pl-2 ">110$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/p3.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza name <span
+                                class="text-danger pl-2 ">100$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/p4.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza name <span
+                                class="text-danger pl-2 ">50$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="card">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse"
+                        data-target="#collapseThree" aria-expanded="false"
+                        aria-controls="collapseThree">
+                  Drinks #3
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                 data-parent="#accordion">
+              <div class="card-body">
+                <div class="row">
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/D1.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Drink name <span
+                                class="text-danger pl-2 ">90$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==================================-->
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/D2.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Drink name <span
+                                class="text-danger pl-2 ">110$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/D3.jpg" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Drink name <span
+                                class="text-danger pl-2 ">100$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                  <div class="col-6 col-md-3">
+                    <div class="card" style="width: 18rem;">
+                      <img class="card-img-top" src="Images/D4.jfif" alt="Card image cap">
+                      <div class="card-body">
+                        <h5 class="card-title">Drink name <span
+                                class="text-danger pl-2 ">50$</span></h5>
+                        <p class="card-text">Some quick example text.</p>
+                        <a href="#" class="btn btn-primary itemBtn btn-block"
+                           data-toggle="modal" data-target="#exampleModal">
+                          Order
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <!--==============================-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Item to order</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <div class="form-group">
+            <label class="">Item ID</label>
+            <Input class="form-control" disabled id="IDD"></Input>
+          </div>
+          <div class="form-group">
+            <label class="">Items count</label>
+            <Input type="number" min="1" value="1" class="form-control"></Input>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="button" class="btn btn-success btn-lg  btn-block btn-block">Add Item To List</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-3.5.1.js"></script>
+<script src="Bootstrap/JS/bootstrap.min.js"></script>
+<script src="js/CreateNav.js"></script>
+<script src="js/Files.js"></script>
+</body>
+
+</html>

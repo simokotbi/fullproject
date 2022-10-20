@@ -38,11 +38,11 @@ public class CustomerControllerImpl  {
 
 
 
-    @GetMapping("/customer/registration")
+    @RequestMapping("/registration")
     public String showRegistrationForm(Model model) {
         model.addAttribute("customer", new Customer());
 
-        return "customer/clientRegister";
+        return "clientRegister";
     }
     //registration start
 
@@ -52,7 +52,7 @@ public class CustomerControllerImpl  {
     }*/
 
 
-    @PostMapping("/customer/clientRegister")
+    @PostMapping("/clientRegister")
     public String clientRegister(Customer customer) {
     customerRepository.save(customer);
 
@@ -62,5 +62,19 @@ public class CustomerControllerImpl  {
 
     }
 
+    /*   @GetMapping("/customer/order")
+       public String showOrderForm(Model model) {
+           model.addAttribute("order", new Order());
 
+           return "customer/order";
+       }
+    @PostMapping("/customer/order")
+    public String clientNeworder(Order order) {
+        orderRepository.save(order);
+
+        return "redirect:/customer/home";
+
+    }
+
+     */
 }

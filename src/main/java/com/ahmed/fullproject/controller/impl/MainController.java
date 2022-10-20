@@ -19,14 +19,18 @@ public class MainController {
 
         @GetMapping("/employee/login")
         public String viewAdminLoginPage() {
-            return "employee/emp-login";
+            return "employee/EmployeeLogin";
         }
 
         @GetMapping("/employee/home")
         public String viewEmployeeHomePage() {
-            return "employee/employee-home";
+            return "employee/employee-order";
         }
 
+    @GetMapping("/employee/neworder")
+    public String viewEmployeeorderPage() {
+        return "new-order";
+    }
         @GetMapping("/customer/login")
         public String viewCustomerLoginPage() {
             return "customer/clientLogin";

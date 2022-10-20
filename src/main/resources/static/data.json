@@ -1,9 +1,0 @@
- [{"EmployeeNumber": "1","FirstName":"Alex","LastName": "Johnson","PhoneNumber":"6105005000","Email":"alex.johnson@gmail.com","Password":"Alex1234"},
-{"EmployeeNumber": "2","FirstName":"Ale","LastName": "Johnson","PhoneNumber":"6105005000","Email":"ale.johnson@gmail.com","Password":"Ale1234"},
-{"EmployeeNumber": "3","FirstName":"Dave","LastName": "Prinston","PhoneNumber":"2152223333","Email":"dave_p@gmail.com","Password":"Dave1234"},
-{"EmployeeNumber": "4","FirstName":"Bob","LastName": "Smith","PhoneNumber":"4840001111","Email":"bsmith@hotmail.com","Password":"Bob1234"},
-{"EmployeeNumber": "5","FirstName":"Tom","LastName": "James","PhoneNumber":"2672672672","Email":"t.james@james.com","Password":"Tom1234"},
-{"EmployeeNumber": "6","FirstName":"Jone","LastName": "Kerr","PhoneNumber":"5555555555","Email":"j.kerr@gmail.com","Password":"Jone1234"}
-
-
-]
