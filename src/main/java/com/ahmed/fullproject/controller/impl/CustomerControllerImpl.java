@@ -80,7 +80,7 @@ ItemRepository itemRepository;
         cartItem.setId(productId);
         cartItem.setQuantity(1);
         cartItemRepository.save(cartItem);
-        return "home";//shoppingCart();
+        return "ItemsList";//shoppingCart();
     }
 
     @GetMapping("/home")
