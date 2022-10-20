@@ -112,7 +112,8 @@
                                                     <h5 class="card-title"><p th:text="${products.name}"></p> <span
                                                             class="text-danger pl-2 "><p th:text="${products.type}"></p></span></h5>
                                                     <p class="card-text"><p th:text="${products.name}"></p></p>
-                                                    <a href="#" class="btn btn-primary itemBtn btn-block"
+                                                    <a href="/" class="btn btn-primary itemBtn btn-block"
+                                                       th:href="@{'/additem/{id}(id=${products.id})}"
                                                        data-toggle="modal" data-target="#exampleModal">
                                                         Order
 

@@ -3,13 +3,14 @@ package com.ahmed.fullproject.entity;
 
 import javax.persistence.*;
 
+import static javax.persistence.GenerationType.IDENTITY;
+
 @Table(name = "CartItem")
 @Entity
 public class CartItem {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
+    @GeneratedValue(strategy = IDENTITY)
+    private Integer id;
     @ManyToOne
     @JoinColumn(name = "itemId")
     private Item item;
@@ -31,11 +32,11 @@ public class CartItem {
     }
 
     private int quantity;
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 }

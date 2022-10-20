@@ -22,6 +22,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.List;
@@ -66,22 +67,29 @@ ItemRepository itemRepository;
     }
 
     @GetMapping("/employee/home")
-    public String showiproducts(Model model) {
+    public String showproducts(Model model) {
       List<Item>item=itemRepository.findAll();
         model.addAttribute("products",item);
         return "employee/employee-order";
     }
 
-    @PostMapping("/addToCart")
-    public String addToCart(HttpServletRequest request, Model model, @RequestParam("itemId") Long id,
-                            @RequestParam("name") String name) {
-
+    @GetMapping("/employee/additem/{productId}")
+    public String addProductToCart(@PathVariable("productId") Integer productId) {
+       // productService.findById(productId).ifPresent(shoppingCartService::addProduct);
         CartItem cartItem=new CartItem();
-        cartItem.setId(id);
+        cartItem.setId(productId);
+        cartItem.setQuantity(1);
         cartItemRepository.save(cartItem);
-
-        return "redirect:/";
+        return "home";//shoppingCart();
     }
+
+    @GetMapping("/home")
+    public ModelAndView shoppingCart() {
+        ModelAndView modelAndView = new ModelAndView("/home");
+        //modelAndView.addObject("products", orderRepository.sa());
+         //modelAndView.addObject("total", shoppingCartService.getTotal().toString());
+         return modelAndView;
+     }
     /*   @GetMapping("/customer/order")
        public String showOrderForm(Model model) {
            model.addAttribute("order", new Order());
