@@ -27,8 +27,8 @@ public class Customer {
     private String address;
 
     private String password;
-    private String Role;
-    private boolean active;
+    private String Role="USER";
+    private boolean active=true;
 
     public boolean isActive() {
         return active;

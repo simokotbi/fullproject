@@ -21,11 +21,13 @@ import com.ahmed.fullproject.controller.ItemController;
 import com.ahmed.fullproject.dto.ItemDTO;
 import com.ahmed.fullproject.entity.Item;
 import com.ahmed.fullproject.mapper.ItemMapper;
-import com.ahmed.fullproject.service.ItemService;
+
 
 @RequestMapping("/item")
 @RestController
-public class ItemControllerImpl implements ItemController {
+public class ItemControllerImpl{
+   /* implements
+} ItemController {
     private final ItemService itemService;
     private final ItemMapper itemMapper;
 
@@ -76,5 +78,5 @@ public class ItemControllerImpl implements ItemController {
     public ItemDTO update(@RequestBody ItemDTO itemDTO, @PathVariable("id") Integer id) {
         Item item = itemMapper.asEntity(itemDTO);
         return itemMapper.asDTO(itemService.update(item, id));
-    }
+    }*/
 }

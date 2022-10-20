@@ -18,14 +18,13 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ahmed.fullproject.controller.ProductController;
-import com.ahmed.fullproject.dto.ProductDTO;
-import com.ahmed.fullproject.entity.Product;
-import com.ahmed.fullproject.mapper.ProductMapper;
-import com.ahmed.fullproject.service.ProductService;
+
 
 @RequestMapping("/product")
 @RestController
-public class ProductControllerImpl implements ProductController {
+public class ProductControllerImpl {
+   /* implements
+} ProductController {
     private final ProductService productService;
     private final ProductMapper productMapper;
 
@@ -76,5 +75,5 @@ public class ProductControllerImpl implements ProductController {
     public ProductDTO update(@RequestBody ProductDTO productDTO, @PathVariable("id") Integer id) {
         Product product = productMapper.asEntity(productDTO);
         return productMapper.asDTO(productService.update(product, id));
-    }
+    }*/
 }

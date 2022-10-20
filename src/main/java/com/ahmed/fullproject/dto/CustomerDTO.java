@@ -4,7 +4,7 @@ import com.ahmed.fullproject.entity.Order;
 
 import java.util.Set;
 
-public class CustomerDTO extends AbstractDTO<Integer> {
+public class CustomerDTO{ /*extends AbstractDTO<Integer> {
     private Integer customerId;
     private String firstName;
     private String lastName;
@@ -70,5 +70,5 @@ public class CustomerDTO extends AbstractDTO<Integer> {
 
     public java.util.Set<com.ahmed.fullproject.entity.Order> getOrders() {
         return this.orders;
-    }
+    }*/
 }

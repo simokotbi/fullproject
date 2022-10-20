@@ -51,7 +51,7 @@ public class SecurityConfig {
      */
 
         http.antMatcher("/employee/**")
-                .authorizeRequests().anyRequest().hasAuthority("USER")
+                .authorizeRequests().anyRequest().hasAuthority("EMPLOYEE")
                 .and()
                 .formLogin()
                 .loginPage("/employee/login")

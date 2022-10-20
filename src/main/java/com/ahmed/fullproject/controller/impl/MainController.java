@@ -1,10 +1,10 @@
 package com.ahmed.fullproject.controller.impl;
 
-import com.ahmed.fullproject.dto.CustomerDTO;
-import com.ahmed.fullproject.service.CustomerService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @Controller

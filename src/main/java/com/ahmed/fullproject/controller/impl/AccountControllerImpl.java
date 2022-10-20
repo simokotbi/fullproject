@@ -4,7 +4,7 @@ import com.ahmed.fullproject.controller.AccountController;
 import com.ahmed.fullproject.dto.AccountDTO;
 import com.ahmed.fullproject.entity.Account;
 import com.ahmed.fullproject.mapper.AccountMapper;
-import com.ahmed.fullproject.service.AccountService;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @RequestMapping("/api/account")
 @RestController
-public class AccountControllerImpl implements AccountController {
+public class AccountControllerImpl{/* implements AccountController {
     private final AccountService accountService;
     private final AccountMapper accountMapper;
 
@@ -68,5 +68,5 @@ public class AccountControllerImpl implements AccountController {
     public AccountDTO update(@RequestBody AccountDTO accountDTO, @PathVariable("id") Integer id) {
         Account account = accountMapper.asEntity(accountDTO);
         return accountMapper.asDTO(accountService.update(account, id));
-    }
+    }*/
 }

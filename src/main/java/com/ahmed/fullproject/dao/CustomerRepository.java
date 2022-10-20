@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import com.ahmed.fullproject.entity.Customer;
 
 @Repository
-public interface CustomerRepository extends JpaRepository<Customer,String> {
+public interface CustomerRepository extends JpaRepository<Customer,Integer> {
 
     Optional<Customer> findByUsername(String username);
 

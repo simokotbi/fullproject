@@ -21,11 +21,11 @@ import com.ahmed.fullproject.controller.OrderController;
 import com.ahmed.fullproject.dto.OrderDTO;
 import com.ahmed.fullproject.entity.Order;
 import com.ahmed.fullproject.mapper.OrderMapper;
-import com.ahmed.fullproject.service.OrderService;
+
 
 @RequestMapping("/order")
 @RestController
-public class OrderControllerImpl implements OrderController {
+public class OrderControllerImpl{ /*implements OrderController {
     private final OrderService orderService;
     private final OrderMapper orderMapper;
 
@@ -76,5 +76,5 @@ public class OrderControllerImpl implements OrderController {
     public OrderDTO update(@RequestBody OrderDTO orderDTO, @PathVariable("id") Integer id) {
         Order order = orderMapper.asEntity(orderDTO);
         return orderMapper.asDTO(orderService.update(order, id));
-    }
+    }*/
 }
