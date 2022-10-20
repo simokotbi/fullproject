@@ -1,7 +1,6 @@
 package com.ahmed.fullproject.dto;
 
 import com.ahmed.fullproject.entity.Employee;
-import com.ahmed.fullproject.entity.Product;
 
 import java.util.Date;
 import java.util.Set;
@@ -12,7 +11,7 @@ public class OrderDTO extends AbstractDTO<Integer> {
     private Double orderPrice;
     private Date entryDate;
     private String notes;
-    private Set<Product> products;
+
     private Set<Employee> employees;
 
     public OrderDTO() {
@@ -58,13 +57,7 @@ public class OrderDTO extends AbstractDTO<Integer> {
         return this.notes;
     }
 
-    public void setProducts(java.util.Set<com.ahmed.fullproject.entity.Product> products) {
-        this.products = products;
-    }
 
-    public java.util.Set<com.ahmed.fullproject.entity.Product> getProducts() {
-        return this.products;
-    }
 
     public void setEmployees(java.util.Set<com.ahmed.fullproject.entity.Employee> employees) {
         this.employees = employees;
