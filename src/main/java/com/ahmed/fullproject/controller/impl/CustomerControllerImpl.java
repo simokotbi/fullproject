@@ -15,11 +15,9 @@ package com.ahmed.fullproject.controller.impl;
 // import java.util.stream.Collectors;
 
 import com.ahmed.fullproject.controller.CustomerController;
-import com.ahmed.fullproject.dao.CustomerRepository;
-import com.ahmed.fullproject.dao.ItemRepository;
-import com.ahmed.fullproject.dao.OrderRepository;
-import com.ahmed.fullproject.dao.ProductRepository;
+import com.ahmed.fullproject.dao.*;
 import com.ahmed.fullproject.dto.CustomerDTO;
+import com.ahmed.fullproject.entity.CartItem;
 import com.ahmed.fullproject.entity.Customer;
 import com.ahmed.fullproject.entity.Item;
 import com.ahmed.fullproject.entity.Product;
@@ -48,7 +46,8 @@ ItemRepository itemRepository;
 
     @Autowired
     ProductRepository productRepository;
-
+    @Autowired
+    CartItemRepository cartItemRepository;
     @RequestMapping("/registration")
     public String showRegistrationForm(Model model) {
         model.addAttribute("customer", new Customer());
@@ -84,8 +83,9 @@ ItemRepository itemRepository;
     public String addToCart(HttpServletRequest request, Model model, @RequestParam("itemId") Long id,
                             @RequestParam("name") String name) {
 
-
-        //orderRepository.save();
+        CartItem cartItem=new CartItem();
+        cartItem.setId(id);
+        cartItemRepository.save(cartItem);
 
         return "redirect:/";
     }

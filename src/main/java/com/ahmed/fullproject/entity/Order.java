@@ -13,6 +13,7 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 @Table(name = "`order`")
+//@Table(name = "order")
 @Entity
 public class Order {
     @Id
